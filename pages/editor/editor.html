@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактор</title>
+    <link rel="stylesheet" href="./../../css/indexstyle.css">
+    <link rel="stylesheet" href="./../../css/editor.css">
+    <script src="./../../js/jquery-3.3.1.min.js"></script>
+    <script src="./../../js/editor.js"></script>
+</head>
+<body>
+    <header id="SecondaryHeader">
+        <div id="Return">
+            <ul id="Main">
+                <li><a class="button" id="HeaderLink" href="./../../admindex.html">Главная</a></li>
+            </ul>
+        </div>
+       
+        <div id="Title">
+            <span><h1>Редактор расписания</h1></span>
+        </div>
+    </header>
+    
+    <div id="MainBlock">
+        
+        <div id="Rowable">
+            <div>
+                <h4>Курс: <select id="Course" onchange="SelectCourse()">
+                    <option value="-1">Не выбрано</option>
+                </select></h4>
+                <h4>Группа: <select id="Group" onchange="ReloadTable()">
+                    <option value="-1">Не выбрано</option>
+                </select></h4>
+            </div>
+            <div>
+                <h4>День: 
+                    <select id="Day" onchange="ReloadTable()">
+                        <option value="-1">Не выбрано</option>
+                    </select>
+                </h4>
+                <h4>Числитель: 
+                    <select id="Oddity" onchange="ReloadTable()">
+                        <option value="0">Числитель</option>
+                        <option value="1">Знаменатель</option>
+                    </select>
+                </h4>
+            </div>
+        </div>
+        
+        <div id="Content">
+           
+           
+           <div id="TableDiv">
+           
+           </div>
+           <div id="SubjectsDiv">
+                <h2>Дисциплина</h2>
+                <select id="Subject" onchange="SetSubject()">
+                    <option value="-1">Не выбрано</option>
+                </select>
+                <h2>Аудитория</h2>
+                <select id="Room" onchange="SetRoom()">
+                    <option value="-1">Не выбрано</option>
+                </select>
+                <div id="Hor">
+                    <button class="ButtonInput" onClick="saveSubject()">Добавить</button>
+                    <button class="ButtonInput" onClick="changeSubject()">Изменить</button>
+                    <button class="ButtonInput" onClick="deleteSubject()">Удалить</button>
+                </div>
+           </div>
+           
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

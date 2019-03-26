@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Расписание</title>
+        <link rel="stylesheet" href="./css/indexstyle.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <script src="./js/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="CenteredH1">
+                <span><h1>Расписание</h1></span>
+            </div>
+            <div id="Index">
+                <div id="Rowable">
+                    <div>
+                        <h4>Курс: <select id="Course" onchange="SelectCourse()">
+                            <option value="-1">Не выбрано</option>
+                        </select></h4>
+                        <h4>Группа: <select id="Group" onchange="ReloadTable()">
+                            <option value="-1">Не выбрано</option>
+                        </select></h4>
+                    </div>
+                    <div>
+                        <h4>День: 
+                            <select id="Day" onchange="ReloadTable()">
+                                <option value="-1">Не выбрано</option>
+                            </select>
+                        </h4>
+                        <h4>Числитель: 
+                            <select id="Oddity" onchange="ReloadTable()">
+                                <option value="0">Числитель</option>
+                                <option value="1">Знаменатель</option>
+                            </select>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="Content">
+            <div id="TableDiv">
+           
+           </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+
+#Rowable {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+}
+
+#Rowable div
+{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-flow: column;
+}
+#Rowable div h4 {
+    margin: 5px
+}
+
+h4 select {
+    float: right;
+    margin: 0 0 0 15px;
+}
+
+#Content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#TableDiv {
+    width: 100%;
+    padding: 20px;
+}
+
+#Table {
+    width: 100%;
+    padding: 20px;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+thead {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+
+.TimeTD {
+    width: 1px;
+    white-space: nowrap;
+}

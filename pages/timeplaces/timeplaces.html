@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Учебное время</title>
+    <link rel="stylesheet" href="./../../css/indexstyle.css">
+    <link rel="stylesheet" href="./../../css/secondarypages.css">
+    <link rel="stylesheet" href="./../../css/courses.css">
+    <script src="./../../js/timeplaces_logic.js"></script>
+    <script src="./../../js/jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+    <header id="SecondaryHeader">
+        <div id="Return">
+            <ul id="Main">
+                <li><a class="button" id="HeaderLink" href="./../../admindex.html">Главная</a></li>
+            </ul>
+        </div>
+       
+        <div id="Title">
+            <span><h1>Учебное время</h1></span>
+        </div>
+    </header>
+    
+    <div id="MainBlock">
+       
+       <div class="CoursesBlock">
+           <div class="CurrentInBase">
+           <div class="HeadDiv">
+                <h1>Пары</h1>
+           </div>
+           
+           <div id="Renew">
+              <button class="ButtonInput" onClick="showTimeplaces()">Обновить данные</button>
+           </div>
+           
+           <div id="Table">
+               
+           </div>
+        </div>
+        <div class="Actions">
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Добавить</h2>
+               </div>
+               <div class="Elements">
+                    <span>Начало: </span>
+                    <input type="time" name="AddStart">
+                    <span>Конец: </span>
+                    <input type="time" name="AddStop">
+                    <span>Тип: </span>
+                    <select id="AddType">
+                        <option value="0">Числитель</option>
+                        <option value="1">Знаменатель</option>
+                    </select>
+                    <button class="ButtonInput" onClick="addTimeplace()">Добавить</button>
+               </div>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Изменить</h2>
+               </div>
+               <div class="Elements">
+                    <span>ID: </span>
+                    <input type="text" name="OldID">
+                    <span>-></span>
+                    <span>Начало: </span>
+                    <input type="time" name="NewStart">
+                    <span>Конец: </span>
+                    <input type="time" name="NewStop">
+                    <span>Тип: </span>
+                    <select id="NewType">
+                        <option value="0">Числитель</option>
+                        <option value="1">Знаменатель</option>
+                    </select>
+                    <button class="ButtonInput" onClick="changeTimeplace()">Изменить</button>
+               </div>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Удалить</h2>
+               </div>
+               <div class="Elements">
+                    <span>ID: </span>
+                    <input type="text" name="DeleteTimeplace">
+                    <button class="ButtonInput" onClick="deleteTimeplace()">Удалить</button>
+               </div>
+           </div>
+        </div>
+       </div>
+       
+       <div class="CoursesBlock" id="Downmost">
+           <div class="CurrentInBase">
+           <div class="HeadDiv">
+                <h1>Учебные дни</h1>
+           </div>
+           
+           <div id="Renew">
+              <button class="ButtonInput" onClick="showDays()">Обновить данные</button>
+           </div>
+           
+           <div id="DayTable">
+               
+           </div>
+        </div>
+        <div class="Actions">
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Добавить</h2>
+               </div>
+               <div class="Elements">
+                    <input type="text" name="AddDay">
+                    <button class="ButtonInput" onClick="addDay()">Добавить</button>
+               </div>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Изменить</h2>
+               </div>
+               <div class="Elements">
+                    <input type="text" name="OldDay">
+                    <span>-></span>
+                    <input type="text" name="NewDay">
+                    <button class="ButtonInput" onClick="changeDay()">Изменить</button>
+               </div>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Удалить</h2>
+               </div>
+               <div class="Elements">
+                    <input type="text" name="DeleteDay">
+                    <button class="ButtonInput" onClick="deleteDay()">Удалить</button>
+               </div>
+           </div>
+        </div>
+       </div>
+       
+       
+        
+    </div>
+    
+    
+    
+</body>
+</html>

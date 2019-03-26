@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Аудитории</title>
+    <link rel="stylesheet" href="./../../css/indexstyle.css">
+    <link rel="stylesheet" href="./../../css/secondarypages.css">
+    <script src="./../../js/rooms_logic.js"></script>
+    <script src="./../../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <header id="SecondaryHeader">
+        <div id="Return">
+            <ul id="Main">
+                <li><a class="button" id="HeaderLink" href="./../../admindex.html">Главная</a></li>
+            </ul>
+        </div>
+       
+        <div id="Title">
+            <span><h1>Аудитории</h1></span>
+        </div>
+    </header>
+    
+    <div id="MainBlock">
+        <div class="CurrentInBase">
+           <div class="HeadDiv">
+                <h1>Сейчас в базе</h1>
+           </div>
+           
+           <div id="Renew">
+              <button class="ButtonInput" onClick="showRooms()">Обновить данные</button>
+           </div>
+           
+           <div id="Table">
+               
+           </div>
+        </div>
+        <div class="Actions">
+           <div class="HeadDiv">
+                <h1>Действия</h1>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Добавить</h2>
+               </div>
+               <div class="Elements">
+                    <input type="text" name="AddName">
+                    <button class="ButtonInput" onClick="addRoom()">Добавить</button>
+               </div>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Изменить</h2>
+               </div>
+               <div class="Elements">
+                    <input type="text" name="OldName">
+                    <span>-></span>
+                    <input type="text" name="NewName">
+                    <button class="ButtonInput" onClick="changeRoom()">Изменить</button>
+               </div>
+           </div>
+           <div class="ACDBlock">
+               <div class="HeadDiv">
+                    <h2>Удалить</h2>
+               </div>
+               <div class="Elements">
+                    <input type="text" name="DeleteName">
+                    <button class="ButtonInput" onClick="deleteRoom()">Удалить</button>
+               </div>
+           </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+CREATE TABLE `Timeplace` (
+	`ID` int NOT NULL AUTO_INCREMENT UNIQUE,
+	`Start` TIME NOT NULL UNIQUE,
+	`Stop` TIME NOT NULL UNIQUE,
+	`Odd` BOOLEAN NOT NULL,
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Room` (
+	`ID` int NOT NULL AUTO_INCREMENT,
+	`Name` varchar(6) NOT NULL UNIQUE,
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Group` (
+	`ID` int NOT NULL AUTO_INCREMENT,
+	`Name` varchar(30) NOT NULL,
+	`ID_Course` int NOT NULL,
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Lesson` (
+	`ID_Timeplace` int NOT NULL,
+	`ID_Day` int NOT NULL,
+	`ID_Group` int NOT NULL,
+	`ID_Room` int NOT NULL,
+	PRIMARY KEY (`ID_Timeplace`,`ID_Day`,`ID_Group`,`ID_Room`)
+);
+
+CREATE TABLE `Day` (
+	`ID` int NOT NULL AUTO_INCREMENT,
+	`Name` varchar(12) NOT NULL UNIQUE,
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Course` (
+	`ID` int NOT NULL AUTO_INCREMENT,
+	`Number` int NOT NULL,
+	PRIMARY KEY (`ID`)
+);
+
+ALTER TABLE `Group` ADD CONSTRAINT `Group_fk0` FOREIGN KEY (`ID_Course`) REFERENCES `Course`(`ID`);
+
+ALTER TABLE `Lesson` ADD CONSTRAINT `Lesson_fk0` FOREIGN KEY (`ID_Timeplace`) REFERENCES `Timeplace`(`ID`);
+
+ALTER TABLE `Lesson` ADD CONSTRAINT `Lesson_fk1` FOREIGN KEY (`ID_Day`) REFERENCES `Day`(`ID`);
+
+ALTER TABLE `Lesson` ADD CONSTRAINT `Lesson_fk2` FOREIGN KEY (`ID_Group`) REFERENCES `Group`(`ID`);
+
+ALTER TABLE `Lesson` ADD CONSTRAINT `Lesson_fk3` FOREIGN KEY (`ID_Room`) REFERENCES `Room`(`ID`);

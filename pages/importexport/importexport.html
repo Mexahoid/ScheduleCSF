@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Импорт</title>
+        <link rel="stylesheet" href="./../../css/indexstyle.css">
+        <link rel="stylesheet" href="./../../css/importexport.css">
+        <script src="./../../js/jquery-3.3.1.min.js"></script>
+        <script src="./../../js/importexport.js"></script>
+    </head>
+    <body>
+        <header id="SecondaryHeader">
+            <div id="Return">
+                <ul id="Main">
+                    <li><a class="button" id="HeaderLink" href="./../../admindex.html">Главная</a></li>
+                </ul>
+            </div>
+           
+            <div id="Title">
+                <span><h1>Импорт расписания</h1></span>
+            </div>
+        </header>
+            
+        <div id="content">
+            <div>
+                <input id="ImportFile" type="file"/>
+                <button class="ButtonInput" onClick="Import()">Импорт</button>
+                <div id="ImportText">
+                </div>
+            </div>
+            
+            <!-- <div>
+                <button class="ButtonInput" onClick="Export()">Экспорт</button>
+                <a href="" id="a">Ссылка на скачивание</a>
+                <div id="ExportText">
+                </div>
+            </div> -->
+        </div>
+    </body>
+</html>

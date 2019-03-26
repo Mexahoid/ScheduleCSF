@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Курсы и группы</title>
+        <link rel="stylesheet" href="./../../css/indexstyle.css">
+        <link rel="stylesheet" href="./../../css/secondarypages.css">
+        <link rel="stylesheet" href="./../../css/courses.css">
+        <script src="./../../js/coursesandgroups_logic.js"></script>
+        <script src="./../../js/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <header id="SecondaryHeader">
+            <div id="Return">
+                <ul id="Main">
+                    <li><a class="button" id="HeaderLink" href="./../../admindex.html">Главная</a></li>
+                </ul>
+            </div>
+           
+            <div id="Title">
+                <span><h1>Курсы и группы</h1></span>
+            </div>
+        </header>
+        
+        <div id="MainBlock">
+           
+           <div class="CoursesBlock">
+                <div class="CurrentInBase">
+                   <div class="HeadDiv">
+                        <h1>Сейчас в базе</h1>
+                   </div>
+                   
+                   <div id="CourseRenew">
+                      <button class="ButtonInput" onClick="showCourses()">Обновить данные</button>
+                   </div>
+                   
+                   <div id="CourseTable">
+                       
+                   </div>
+                </div>
+                <div class="Actions">
+                   <div class="ACDBlock">
+                       <div class="HeadDiv">
+                            <h2>Добавить курс</h2>
+                       </div>
+                       <div class="Elements">
+                            <input type="number" name="AddCourse">
+                            <button class="ButtonInput" onClick="addCourse()">Добавить</button>
+                       </div>
+                   </div>
+                   <div class="ACDBlock">
+                       <div class="HeadDiv">
+                            <h2>Изменить курс</h2>
+                       </div>
+                       <div class="Elements">
+                            <input type="number" name="OldCourse">
+                            <span>-></span>
+                            <input type="number" name="NewCourse">
+                            <button class="ButtonInput" onClick="changeCourse()">Изменить</button>
+                       </div>
+                   </div>
+                   <div class="ACDBlock">
+                       <div class="HeadDiv">
+                            <h2>Удалить курс</h2>
+                       </div>
+                       <div class="Elements">
+                            <input type="number" name="DeleteCourse">
+                            <button class="ButtonInput" onClick="deleteCourse()">Удалить</button>
+                       </div>
+                   </div>
+                </div>
+           </div>
+           
+           <div class="CoursesBlock" id="Downmost">
+                <div class="CurrentInBase">
+                   <div class="HeadDiv">
+                        <h1>Сейчас в базе</h1>
+                        <span>Курс: 
+                            <select id="CourseOption" onchange="showGroups()">
+                        
+                            </select>
+                        </span>
+                        
+                   </div>
+                   
+                   <div id="GroupTable">
+                       
+                   </div>
+                   
+                </div>
+                <div class="Actions">
+                   <div class="ACDBlock">
+                       <div class="HeadDiv">
+                            <h2>Добавить группу</h2>
+                       </div>
+                       <div class="Elements">
+                            <input type="text" name="AddGroup">
+                            <button class="ButtonInput" onClick="addGroup()">Добавить</button>
+                       </div>
+                   </div>
+                   <div class="ACDBlock">
+                       <div class="HeadDiv">
+                            <h2>Изменить группу</h2>
+                       </div>
+                       <div class="Elements">
+                            <input type="text" name="OldGroup">
+                            <span>-></span>
+                            <input type="text" name="NewGroup">
+                            <button class="ButtonInput" onClick="changeGroup()">Изменить</button>
+                       </div>
+                   </div>
+                   <div class="ACDBlock">
+                       <div class="HeadDiv">
+                            <h2>Удалить группу</h2>
+                       </div>
+                       <div class="Elements">
+                            <input type="text" name="DeleteGroup">
+                            <button class="ButtonInput" onClick="deleteGroup()">Удалить</button>
+                       </div>
+                   </div>
+                </div>
+           </div>
+           
+            
+        </div>
+        
+    </body>
+</html>

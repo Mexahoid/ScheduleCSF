@@ -1,0 +1,35 @@
+
+#MainBlock {
+
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+
+}
+
+#CoursesCurrentInBase {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 20%;
+    padding: 20px;
+}
+
+#CoursesActions {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    align-items: center;
+    padding: 20px;
+}
+
+.CoursesBlock {
+    height: auto;
+    display: flex;
+    flex-flow: row;
+}
+
+#Downmost {
+    border-style: dotted;
+    border-width: 4px 0 0 0;
+}

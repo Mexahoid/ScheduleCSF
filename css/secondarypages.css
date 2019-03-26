@@ -1,0 +1,70 @@
+
+#MainBlock {
+    height: 100%;
+    
+    display: flex;
+    flex-flow: column;
+}
+
+.CurrentInBase {
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 20%;
+    padding: 20px;
+}
+
+
+
+.Actions {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    align-items: center;
+    padding: 20px;
+}
+
+.HeadDiv {
+    width: 100%;
+    text-align: center
+}
+
+#Table {
+    width: 100%;
+    padding: 20px;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+thead {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+
+.ButtonInput {
+    padding: 5px;
+    margin: 5px;
+}
+
+.ACDBlock {
+    width: 100%;
+}
+
+.Elements {
+    text-align: center;
+    align-items: center;
+}
+
+#MainBlock {
+    display: flex;
+    flex-flow: row;
+}
