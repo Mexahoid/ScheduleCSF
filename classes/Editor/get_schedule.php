@@ -51,7 +51,7 @@
                     $subj = $logic->GetSubjectByID($sched[0]['ID_Subject'])[0]['Name'];
                     $room = $logic->GetRoomByID($sched[0]['ID_Room'])[0]['Name'];
                     $r = $subj . ", " . $room;
-                    echo "<td onclick='tdclick(" . $timeplace['ID'] . ", " . $grp['ID'] . ", \"" . $subj . "\", " . $room . "); redraw(this)'>" . $r . "</td>";
+                    echo "<td onclick='tdclick(" . $timeplace['ID'] . ", " . $grp['ID'] . ", \"" . $subj . "\", \"" . $room . "\"); redraw(this)'>" . $r . "</td>";
                 }
                 else
                     echo "<td onclick='tdclick(" . $timeplace['ID'] . ", " . $grp['ID'] . "); redraw(this)'></td>";
